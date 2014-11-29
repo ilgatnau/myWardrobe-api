@@ -1,9 +1,13 @@
 package com.gatnau.mywardobe.api.users;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.gatnau.mywardobe.api.wardrobes.Wardrobe;
 
 @Entity
 public class User {
@@ -14,6 +18,7 @@ public class User {
 
 	private String firstName;
 	private String lastName;
+	private List<Wardrobe> wardrobes;
 
 	public String getFirstName() {
 		return firstName;
@@ -29,5 +34,13 @@ public class User {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public List<Wardrobe> getWardrobes() {
+		return wardrobes;
+	}
+
+	public void setWardrobes(List<Wardrobe> wardrobes) {
+		this.wardrobes = wardrobes;
 	}
 }
