@@ -15,9 +15,11 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-
+	
+	private boolean publicUser;
 	private String firstName;
 	private String lastName;
+	private String token;
 	private List<Wardrobe> wardrobes;
 
 	public String getFirstName() {
@@ -42,5 +44,21 @@ public class User {
 
 	public void setWardrobes(List<Wardrobe> wardrobes) {
 		this.wardrobes = wardrobes;
+	}
+	
+	public boolean isPublicUser() {
+		return publicUser;
+	}
+
+	public void setPublicUser(boolean publicUser) {
+		this.publicUser = publicUser;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
 	}
 }
