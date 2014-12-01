@@ -1,19 +1,24 @@
 package com.gatnau.mywardobe.api.wardrobes;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController(value="/users/{idUser}/wardrobes")
+@Entity
 public class Wardrobe {
 	
-	private static List<Wardrobe> wardrobes = new ArrayList<Wardrobe>();
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
-	@RequestMapping(method= RequestMethod.GET)
-	public List<Wardrobe> wardrobes() {
-		return wardrobes;
+	private String description;
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import com.gatnau.mywardobe.api.wardrobes.Wardrobe;
 
@@ -20,6 +21,8 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private String token;
+	
+	@OneToMany
 	private List<Wardrobe> wardrobes;
 
 	public String getFirstName() {
