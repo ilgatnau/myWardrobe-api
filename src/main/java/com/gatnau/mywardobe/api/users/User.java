@@ -18,6 +18,8 @@ public class User {
 	private long id;
 	
 	private boolean publicUser;
+	
+	private String username;
 	private String firstName;
 	private String lastName;
 	private String token;
@@ -63,5 +65,13 @@ public class User {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 }
