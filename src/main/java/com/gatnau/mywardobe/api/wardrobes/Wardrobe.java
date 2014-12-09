@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 import com.gatnau.mywardobe.api.brands.Brand;
+import com.gatnau.mywardobe.api.pictures.Favourite;
 
 @Entity
 public class Wardrobe {
@@ -21,6 +22,9 @@ public class Wardrobe {
 	
 	@ManyToMany
 	private List<Brand> brands;
+	
+	@ManyToMany
+	private List<Favourite> favourites;
 
 	public String getDescription() {
 		return description;

@@ -25,6 +25,9 @@ public class User {
 	private String token;
 	
 	@OneToMany
+	private List<User> follows;
+	
+	@OneToMany
 	private List<Wardrobe> wardrobes;
 
 	public String getFirstName() {
