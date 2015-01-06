@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk: 1.7.0_71
-Built-By: INLZ
-Created-By: Maven Integration for Eclipse
-Main-Class: com.gatnau.mywardobe.api.Application
-
